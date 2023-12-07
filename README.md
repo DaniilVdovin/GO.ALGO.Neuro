@@ -62,7 +62,9 @@
 
 #### 🫂 Участники
 <p align="center">
-<a href="https://app.daily.dev/daniilvdovin"><img src="https://api.daily.dev/devcards/41e11b67aa7f454983b72579a98051ba.png?r=rt5" width="170" alt="Daniil Vdovin's Dev Card"/></a>
-<a href="https://app.daily.dev/sergey19"><img src="https://api.daily.dev/devcards/e296cdd336ed4425b60ee88c86b4a47c.png?r=5fg" width="170" alt="Sergey's Dev Card"/></a>
-<a href="https://app.daily.dev/kharisovilyas"><img src="https://api.daily.dev/devcards/0920b2e42cb74173859effe43bdeaba7.png?r=mea" width="170" alt="Ilyas Kharisov's Dev Card"/></a>
+<a href="https://github.com/DaniilVdovin"><img src="https://api.daily.dev/devcards/41e11b67aa7f454983b72579a98051ba.png?r=rt5" width="170" alt="Daniil Vdovin's Dev Card"/></a>
+<a href="https://github.com/sergey19"><img src="https://api.daily.dev/devcards/e296cdd336ed4425b60ee88c86b4a47c.png?r=5fg" width="170" alt="Sergey's Dev Card"/></a>
+<a href="https://github.com/powerlife000"><img src="https://api.daily.dev/devcards/b624b0b76d9d4b48a71859bcb136dda7.png?r=vxw" width="170" alt="Apollon Stepano's Dev Card"/></a>
+<a href="https://github.com/kharisovilyas"><img src="https://api.daily.dev/devcards/0920b2e42cb74173859effe43bdeaba7.png?r=mea" width="170" alt="Ilias Kharisov's Dev Card"/></a>
+<a href="https://github.com/Innosan"><img src="https://api.daily.dev/devcards/Innosan?r=mea" width="170" alt="Michail Dev Card"/></a>
 </p>
