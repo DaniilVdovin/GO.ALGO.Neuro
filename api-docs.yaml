@@ -3,8 +3,8 @@ info:
   title: OpenAPI definition
   version: v0
 servers:
-- url: http://213.171.14.97:8080
-  description: Generated server url
+- url: http://localhost:8080
+  description: Main API
 paths:
   /goDurations:
     get:
