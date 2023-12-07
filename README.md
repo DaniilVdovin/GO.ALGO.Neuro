@@ -1,4 +1,7 @@
+
 # GO.ALGO.Neuro
+*«Чтобы иметь деньги, нужно их делать. Чтобы делать большие деньги, нужно вовремя делать правильные вещи»*\
+***© Эдвин Лефевр***
 
 ## ℹ️ О проекте 
 ![web-application](https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/bb338dc8-5339-48c7-b985-914ef7bb5447)
@@ -10,11 +13,17 @@
 - Оценка доходности: Мы оцениваем доходность наших нейронных сетей, чтобы убедиться в их эффективности.
 - Генерация сигналов: Мы генерируем сигналы для покупки, удержания или продажи акций.
 
-## 📦 Репозитории
+<p align="center">
+  <img width="838" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/407d6e30-4caa-4e72-be74-78a5d5ba526f">
+</p>
+
+## 📦 Репозитории, ссылки
 
 🔥 [MoexAlgo: Получение уникальных данных от MOEX](https://github.com/moexalgo/moexalgo/tree/main)
 
 🕸️ [Наше Web-приложение (Пользовательский интерфейс)](https://github.com/Innosan/go_algo_web)
+
+🎨 [Дизайн платформы (Figma)](https://www.figma.com/file/5EyUOzpstPbvbuEsBEyCsR/GO.ALGO.Neuro)
 
 🧠 [Исходные коды микросервисов пайплайна  (Микро сервисы)](https://github.com/powerlife000/moex_hackaton/)
 
@@ -30,6 +39,17 @@
 
 📺 [Презентация (PROMO)](https://github.com/DaniilVdovin/GO.ALGO.Neuro/blob/b954a6bcec4198a7872c8a7a34f6d306008427ff/NullPointerExeption%20v1.pdf)
 
+🖇️ [Документация к API (OpenAPI .yaml)](https://github.com/DaniilVdovin/GO.ALGO.Neuro/blob/main/api-docs.yaml)
+
+<p align="center">
+  <img width="1451" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/3296017f-ac96-49da-899a-1a1d68417b9d">
+</p>
+
+### Подробнее ?
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/80fa14c4-fdb4-4d6b-a765-828df1352516">
+  <img width="500" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/ff919003-a0c5-4ebb-a540-52bbd8b36029">
+</p>
 
 #### Перечень скриптов микросервисов: 
 |Сервис|Описание сервиса|
