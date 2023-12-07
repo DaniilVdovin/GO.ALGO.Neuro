@@ -47,8 +47,8 @@
 
 ### Подробнее ?
 <p align="center">
-  <img width="500" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/80fa14c4-fdb4-4d6b-a765-828df1352516">
-  <img width="500" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/ff919003-a0c5-4ebb-a540-52bbd8b36029">
+  <img width="250" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/80fa14c4-fdb4-4d6b-a765-828df1352516">
+  <img width="250" alt="image" src="https://github.com/DaniilVdovin/GO.ALGO.Neuro/assets/45402557/ff919003-a0c5-4ebb-a540-52bbd8b36029">
 </p>
 
 #### Перечень скриптов микросервисов: 
