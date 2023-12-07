@@ -59,3 +59,9 @@
 |***edu_neural.py*** | Обучение нейронных сетей
 |***calc_profit.py*** | Оценка доходности нейронных сетей (бек тесты)
 |***calc_signals.py*** | Генерация торговых и инвестиционных сигналов
+
+#### 🫂 Участники
+<p align="center">
+<a href="https://app.daily.dev/daniilvdovin"><img src="https://api.daily.dev/devcards/41e11b67aa7f454983b72579a98051ba.png?r=rt5" width="170" alt="Daniil Vdovin's Dev Card"/></a>
+<a href="https://app.daily.dev/sergey19"><img src="https://api.daily.dev/devcards/e296cdd336ed4425b60ee88c86b4a47c.png?r=5fg" width="170" alt="Sergey's Dev Card"/></a>
+</p>
