@@ -1,0 +1,3118 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://213.171.14.97:8080
+  description: Generated server url
+paths:
+  /goDurations:
+    get:
+      tags:
+      - go-duration-entity-controller
+      description: get-goduration
+      operationId: getCollectionResource-goduration-get_1
+      parameters:
+      - name: page
+        in: query
+        description: Zero-based page index (0..N)
+        required: false
+        schema:
+          minimum: 0
+          type: integer
+          default: 0
+      - name: size
+        in: query
+        description: The size of the page to be returned
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 20
+      - name: sort
+        in: query
+        description: "Sorting criteria in the format: property,(asc|desc). Default\
+          \ sort order is ascending. Multiple sort criteria are supported."
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoDuration'
+            application/x-spring-data-compact+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoDuration'
+            text/uri-list:
+              schema:
+                type: string
+    post:
+      tags:
+      - go-duration-entity-controller
+      description: create-goduration
+      operationId: postCollectionResource-goduration-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goDurationRequestBody'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoDuration'
+  /goDurations/{id}:
+    get:
+      tags:
+      - go-duration-entity-controller
+      description: get-goduration
+      operationId: getItemResource-goduration-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoDuration'
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-duration-entity-controller
+      description: update-goduration
+      operationId: putItemResource-goduration-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goDurationRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoDuration'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoDuration'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-duration-entity-controller
+      description: delete-goduration
+      operationId: deleteItemResource-goduration-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-duration-entity-controller
+      description: patch-goduration
+      operationId: patchItemResource-goduration-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goDurationRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoDuration'
+        "204":
+          description: No Content
+  /goLeaderBoardItems:
+    get:
+      tags:
+      - go-leader-board-item-entity-controller
+      description: get-goleaderboarditem
+      operationId: getCollectionResource-goleaderboarditem-get_1
+      parameters:
+      - name: page
+        in: query
+        description: Zero-based page index (0..N)
+        required: false
+        schema:
+          minimum: 0
+          type: integer
+          default: 0
+      - name: size
+        in: query
+        description: The size of the page to be returned
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 20
+      - name: sort
+        in: query
+        description: "Sorting criteria in the format: property,(asc|desc). Default\
+          \ sort order is ascending. Multiple sort criteria are supported."
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoLeaderBoardItem'
+            application/x-spring-data-compact+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoLeaderBoardItem'
+            text/uri-list:
+              schema:
+                type: string
+    post:
+      tags:
+      - go-leader-board-item-entity-controller
+      description: create-goleaderboarditem
+      operationId: postCollectionResource-goleaderboarditem-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goLeaderBoardItemRequestBody'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoLeaderBoardItem'
+  /goLeaderBoardItems/search/findByTimeframe:
+    get:
+      tags:
+      - go-leader-board-item-search-controller
+      operationId: executeSearch-goleaderboarditem-get
+      parameters:
+      - name: timeframe
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/CollectionModelEntityModelGoLeaderBoardItem'
+        "404":
+          description: Not Found
+  /goLeaderBoardItems/{id}:
+    get:
+      tags:
+      - go-leader-board-item-entity-controller
+      description: get-goleaderboarditem
+      operationId: getItemResource-goleaderboarditem-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoLeaderBoardItem'
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-leader-board-item-entity-controller
+      description: update-goleaderboarditem
+      operationId: putItemResource-goleaderboarditem-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goLeaderBoardItemRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoLeaderBoardItem'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoLeaderBoardItem'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-leader-board-item-entity-controller
+      description: delete-goleaderboarditem
+      operationId: deleteItemResource-goleaderboarditem-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-leader-board-item-entity-controller
+      description: patch-goleaderboarditem
+      operationId: patchItemResource-goleaderboarditem-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goLeaderBoardItemRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoLeaderBoardItem'
+        "204":
+          description: No Content
+  /goScriptConfigs:
+    get:
+      tags:
+      - go-script-config-entity-controller
+      description: get-goscriptconfig
+      operationId: getCollectionResource-goscriptconfig-get_1
+      parameters:
+      - name: page
+        in: query
+        description: Zero-based page index (0..N)
+        required: false
+        schema:
+          minimum: 0
+          type: integer
+          default: 0
+      - name: size
+        in: query
+        description: The size of the page to be returned
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 20
+      - name: sort
+        in: query
+        description: "Sorting criteria in the format: property,(asc|desc). Default\
+          \ sort order is ascending. Multiple sort criteria are supported."
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoScriptConfig'
+            application/x-spring-data-compact+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoScriptConfig'
+            text/uri-list:
+              schema:
+                type: string
+    post:
+      tags:
+      - go-script-config-entity-controller
+      description: create-goscriptconfig
+      operationId: postCollectionResource-goscriptconfig-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goScriptConfigRequestBody'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+  /goScriptConfigs/search/findByService:
+    get:
+      tags:
+      - go-script-config-search-controller
+      operationId: executeSearch-goscriptconfig-get
+      parameters:
+      - name: service
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/CollectionModelEntityModelGoScriptConfig'
+        "404":
+          description: Not Found
+  /goScriptConfigs/{id}:
+    get:
+      tags:
+      - go-script-config-entity-controller
+      description: get-goscriptconfig
+      operationId: getItemResource-goscriptconfig-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-script-config-entity-controller
+      description: update-goscriptconfig
+      operationId: putItemResource-goscriptconfig-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goScriptConfigRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-script-config-entity-controller
+      description: delete-goscriptconfig
+      operationId: deleteItemResource-goscriptconfig-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-script-config-entity-controller
+      description: patch-goscriptconfig
+      operationId: patchItemResource-goscriptconfig-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goScriptConfigRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "204":
+          description: No Content
+  /goSignals:
+    get:
+      tags:
+      - go-signal-entity-controller
+      description: get-gosignal
+      operationId: getCollectionResource-gosignal-get_1
+      parameters:
+      - name: page
+        in: query
+        description: Zero-based page index (0..N)
+        required: false
+        schema:
+          minimum: 0
+          type: integer
+          default: 0
+      - name: size
+        in: query
+        description: The size of the page to be returned
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 20
+      - name: sort
+        in: query
+        description: "Sorting criteria in the format: property,(asc|desc). Default\
+          \ sort order is ascending. Multiple sort criteria are supported."
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoSignal'
+            application/x-spring-data-compact+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoSignal'
+            text/uri-list:
+              schema:
+                type: string
+    post:
+      tags:
+      - go-signal-entity-controller
+      description: create-gosignal
+      operationId: postCollectionResource-gosignal-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goSignalRequestBody'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoSignal'
+  /goSignals/search/findAllByTaskId:
+    get:
+      tags:
+      - go-signal-search-controller
+      operationId: executeSearch-gosignal-get
+      parameters:
+      - name: taskId
+        in: query
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/CollectionModelEntityModelGoSignal'
+        "404":
+          description: Not Found
+  /goSignals/search/findAllByTicker:
+    get:
+      tags:
+      - go-signal-search-controller
+      operationId: executeSearch-gosignal-get_1
+      parameters:
+      - name: ticker
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/CollectionModelEntityModelGoSignal'
+        "404":
+          description: Not Found
+  /goSignals/{id}:
+    get:
+      tags:
+      - go-signal-entity-controller
+      description: get-gosignal
+      operationId: getItemResource-gosignal-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoSignal'
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-signal-entity-controller
+      description: update-gosignal
+      operationId: putItemResource-gosignal-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goSignalRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoSignal'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoSignal'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-signal-entity-controller
+      description: delete-gosignal
+      operationId: deleteItemResource-gosignal-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-signal-entity-controller
+      description: patch-gosignal
+      operationId: patchItemResource-gosignal-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goSignalRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoSignal'
+        "204":
+          description: No Content
+  /goTasks:
+    get:
+      tags:
+      - go-task-entity-controller
+      description: get-gotask
+      operationId: getCollectionResource-gotask-get_1
+      parameters:
+      - name: page
+        in: query
+        description: Zero-based page index (0..N)
+        required: false
+        schema:
+          minimum: 0
+          type: integer
+          default: 0
+      - name: size
+        in: query
+        description: The size of the page to be returned
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 20
+      - name: sort
+        in: query
+        description: "Sorting criteria in the format: property,(asc|desc). Default\
+          \ sort order is ascending. Multiple sort criteria are supported."
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoTask'
+            application/x-spring-data-compact+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoTask'
+            text/uri-list:
+              schema:
+                type: string
+    post:
+      tags:
+      - go-task-entity-controller
+      description: create-gotask
+      operationId: postCollectionResource-gotask-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goTaskRequestBody'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTask'
+  /goTasks/search/findByStatus:
+    get:
+      tags:
+      - go-task-search-controller
+      operationId: executeSearch-gotask-get
+      parameters:
+      - name: status
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/CollectionModelEntityModelGoTask'
+        "404":
+          description: Not Found
+  /goTasks/{id}:
+    get:
+      tags:
+      - go-task-entity-controller
+      description: get-gotask
+      operationId: getItemResource-gotask-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTask'
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-task-entity-controller
+      description: update-gotask
+      operationId: putItemResource-gotask-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goTaskRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTask'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTask'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-task-entity-controller
+      description: delete-gotask
+      operationId: deleteItemResource-gotask-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-task-entity-controller
+      description: patch-gotask
+      operationId: patchItemResource-gotask-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goTaskRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTask'
+        "204":
+          description: No Content
+  /goTasks/{id}/config:
+    get:
+      tags:
+      - go-task-property-reference-controller
+      description: get-goscriptconfig-by-gotask-Id
+      operationId: followPropertyReference-gotask-get_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+            text/uri-list:
+              schema:
+                type: string
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-task-property-reference-controller
+      description: update-goscriptconfig-by-gotask-Id
+      operationId: createPropertyReference-gotask-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CollectionModelObject'
+          application/x-spring-data-compact+json:
+            schema:
+              $ref: '#/components/schemas/CollectionModelObject'
+          text/uri-list:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-task-property-reference-controller
+      description: delete-goscriptconfig-by-gotask-Id
+      operationId: deletePropertyReference-gotask-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-task-property-reference-controller
+      description: patch-goscriptconfig-by-gotask-Id
+      operationId: createPropertyReference-gotask-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CollectionModelObject'
+          application/x-spring-data-compact+json:
+            schema:
+              $ref: '#/components/schemas/CollectionModelObject'
+          text/uri-list:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "204":
+          description: No Content
+  /goTasks/{id}/config/{propertyId}:
+    get:
+      tags:
+      - go-task-property-reference-controller
+      description: get-goscriptconfig-by-gotask-Id
+      operationId: followPropertyReference-gotask-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: propertyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        "404":
+          description: Not Found
+    delete:
+      tags:
+      - go-task-property-reference-controller
+      description: delete-goscriptconfig-by-gotask-Id
+      operationId: deletePropertyReferenceId-gotask-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: propertyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+  /goTickets:
+    get:
+      tags:
+      - go-ticket-entity-controller
+      description: get-goticket
+      operationId: getCollectionResource-goticket-get_1
+      parameters:
+      - name: page
+        in: query
+        description: Zero-based page index (0..N)
+        required: false
+        schema:
+          minimum: 0
+          type: integer
+          default: 0
+      - name: size
+        in: query
+        description: The size of the page to be returned
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 20
+      - name: sort
+        in: query
+        description: "Sorting criteria in the format: property,(asc|desc). Default\
+          \ sort order is ascending. Multiple sort criteria are supported."
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoTicket'
+            application/x-spring-data-compact+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoTicket'
+            text/uri-list:
+              schema:
+                type: string
+    post:
+      tags:
+      - go-ticket-entity-controller
+      description: create-goticket
+      operationId: postCollectionResource-goticket-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goTicketRequestBody'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTicket'
+  /goTickets/{id}:
+    get:
+      tags:
+      - go-ticket-entity-controller
+      description: get-goticket
+      operationId: getItemResource-goticket-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTicket'
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-ticket-entity-controller
+      description: update-goticket
+      operationId: putItemResource-goticket-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goTicketRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTicket'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTicket'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-ticket-entity-controller
+      description: delete-goticket
+      operationId: deleteItemResource-goticket-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-ticket-entity-controller
+      description: patch-goticket
+      operationId: patchItemResource-goticket-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goTicketRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoTicket'
+        "204":
+          description: No Content
+  /goUserAuthDatas:
+    get:
+      tags:
+      - go-user-auth-data-entity-controller
+      description: get-gouserauthdata
+      operationId: getCollectionResource-gouserauthdata-get_1
+      parameters:
+      - name: page
+        in: query
+        description: Zero-based page index (0..N)
+        required: false
+        schema:
+          minimum: 0
+          type: integer
+          default: 0
+      - name: size
+        in: query
+        description: The size of the page to be returned
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 20
+      - name: sort
+        in: query
+        description: "Sorting criteria in the format: property,(asc|desc). Default\
+          \ sort order is ascending. Multiple sort criteria are supported."
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoUserAuthData'
+            application/x-spring-data-compact+json:
+              schema:
+                $ref: '#/components/schemas/PagedModelEntityModelGoUserAuthData'
+            text/uri-list:
+              schema:
+                type: string
+    post:
+      tags:
+      - go-user-auth-data-entity-controller
+      description: create-gouserauthdata
+      operationId: postCollectionResource-gouserauthdata-post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goUserAuthDataRequestBody'
+        required: true
+      responses:
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoUserAuthData'
+  /goUserAuthDatas/search/existsByUsername:
+    get:
+      tags:
+      - go-user-auth-data-search-controller
+      operationId: executeSearch-gouserauthdata-get
+      parameters:
+      - name: username
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: boolean
+        "404":
+          description: Not Found
+  /goUserAuthDatas/search/findByUsername:
+    get:
+      tags:
+      - go-user-auth-data-search-controller
+      operationId: executeSearch-gouserauthdata-get_1
+      parameters:
+      - name: username
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoUserAuthData'
+        "404":
+          description: Not Found
+  /goUserAuthDatas/{id}:
+    get:
+      tags:
+      - go-user-auth-data-entity-controller
+      description: get-gouserauthdata
+      operationId: getItemResource-gouserauthdata-get
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoUserAuthData'
+        "404":
+          description: Not Found
+    put:
+      tags:
+      - go-user-auth-data-entity-controller
+      description: update-gouserauthdata
+      operationId: putItemResource-gouserauthdata-put
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goUserAuthDataRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoUserAuthData'
+        "201":
+          description: Created
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoUserAuthData'
+        "204":
+          description: No Content
+    delete:
+      tags:
+      - go-user-auth-data-entity-controller
+      description: delete-gouserauthdata
+      operationId: deleteItemResource-gouserauthdata-delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+    patch:
+      tags:
+      - go-user-auth-data-entity-controller
+      description: patch-gouserauthdata
+      operationId: patchItemResource-gouserauthdata-patch
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goUserAuthDataRequestBody'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/EntityModelGoUserAuthData'
+        "204":
+          description: No Content
+  /profile:
+    get:
+      tags:
+      - profile-controller
+      operationId: listAllFormsOfMetadata_1
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/RepresentationModelObject'
+  /profile/goDurations:
+    get:
+      tags:
+      - profile-controller
+      operationId: descriptor_1_1_1
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+            application/alps+json:
+              schema:
+                type: string
+            application/schema+json:
+              schema:
+                $ref: '#/components/schemas/JsonSchema'
+  /profile/goLeaderBoardItems:
+    get:
+      tags:
+      - profile-controller
+      operationId: descriptor_1_1_2
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+            application/alps+json:
+              schema:
+                type: string
+            application/schema+json:
+              schema:
+                $ref: '#/components/schemas/JsonSchema'
+  /profile/goScriptConfigs:
+    get:
+      tags:
+      - profile-controller
+      operationId: descriptor_1_1_3
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+            application/alps+json:
+              schema:
+                type: string
+            application/schema+json:
+              schema:
+                $ref: '#/components/schemas/JsonSchema'
+  /profile/goSignals:
+    get:
+      tags:
+      - profile-controller
+      operationId: descriptor_1_1_4
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+            application/alps+json:
+              schema:
+                type: string
+            application/schema+json:
+              schema:
+                $ref: '#/components/schemas/JsonSchema'
+  /profile/goTasks:
+    get:
+      tags:
+      - profile-controller
+      operationId: descriptor_1_1_5
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+            application/alps+json:
+              schema:
+                type: string
+            application/schema+json:
+              schema:
+                $ref: '#/components/schemas/JsonSchema'
+  /profile/goTickets:
+    get:
+      tags:
+      - profile-controller
+      operationId: descriptor_1_1_6
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+            application/alps+json:
+              schema:
+                type: string
+            application/schema+json:
+              schema:
+                $ref: '#/components/schemas/JsonSchema'
+  /profile/goUserAuthDatas:
+    get:
+      tags:
+      - profile-controller
+      operationId: descriptor_1_1_7
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+            application/alps+json:
+              schema:
+                type: string
+            application/schema+json:
+              schema:
+                $ref: '#/components/schemas/JsonSchema'
+  /api/v1/task/complied:
+    post:
+      tags:
+      - rest-task-controller
+      operationId: TaskComplied
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+  /api/v1/signal/add:
+    post:
+      tags:
+      - rest-signals-controller
+      operationId: add
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/dtoSignal'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoSignal'
+  /api/v1/leaderboard:
+    get:
+      tags:
+      - rest-leader-board-controller
+      operationId: get_1
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/dtoLeaderBoardItem'
+    post:
+      tags:
+      - rest-leader-board-controller
+      operationId: post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/dtoLeaderBoardItem'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+  /api/v1/conf/add:
+    post:
+      tags:
+      - rest-script-conf-controller
+      operationId: add_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/goScriptConfig'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/goScriptConfig'
+  /api/v1/auth/test-request:
+    post:
+      tags:
+      - rest-auth-controller
+      operationId: testPostRequest
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: string
+  /api/v1/auth/register:
+    post:
+      tags:
+      - rest-auth-controller
+      operationId: registerUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/dtoUserAuth'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+  /api/v1/auth/login:
+    post:
+      tags:
+      - rest-auth-controller
+      operationId: loginUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/dtoUserAuth'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+  /api/v1/version:
+    get:
+      tags:
+      - rest-main-controller
+      operationId: getVersion
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+  /api/v1/task/setConfig:
+    get:
+      tags:
+      - rest-task-controller
+      operationId: start
+      parameters:
+      - name: task_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: conf_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+  /api/v1/task/result:
+    get:
+      tags:
+      - rest-task-controller
+      operationId: TaskResult
+      parameters:
+      - name: task_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+  /api/v1/task/lists/withError:
+    get:
+      tags:
+      - rest-task-public-list-controller
+      operationId: goTaskDoneWithErrorlist
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goTask'
+  /api/v1/task/lists/wait:
+    get:
+      tags:
+      - rest-task-public-list-controller
+      operationId: goTaskWaitlist
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goTask'
+  /api/v1/task/lists/inProgress:
+    get:
+      tags:
+      - rest-task-public-list-controller
+      operationId: goTaskInProgresslist
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goTask'
+  /api/v1/task/lists/done:
+    get:
+      tags:
+      - rest-task-public-list-controller
+      operationId: goTaskDonelist
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goTask'
+  /api/v1/task/lists/doneWithError:
+    get:
+      tags:
+      - rest-task-public-list-controller
+      operationId: goTaskDoneAllList
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goTask'
+  /api/v1/task/lists/all:
+    get:
+      tags:
+      - rest-task-public-list-controller
+      operationId: goTaskAllList
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goTask'
+  /api/v1/task/get:
+    get:
+      tags:
+      - rest-task-controller
+      operationId: getGoTask
+      parameters:
+      - name: task_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/goTask'
+  /api/v1/task/close:
+    get:
+      tags:
+      - rest-task-controller
+      operationId: TaskClose
+      parameters:
+      - name: task_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+  /api/v1/task/add:
+    get:
+      tags:
+      - rest-task-controller
+      operationId: goTaskAdd
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/goTask'
+  /api/v1/signal/list:
+    get:
+      tags:
+      - rest-signals-controller
+      operationId: getList
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/dtoSignal'
+  /api/v1/signal/list/byTicker:
+    get:
+      tags:
+      - rest-signals-controller
+      operationId: getListByTicket
+      parameters:
+      - name: ticker
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/dtoSignal'
+  /api/v1/signal/list/ByTask:
+    get:
+      tags:
+      - rest-signals-controller
+      operationId: getListByTask
+      parameters:
+      - name: task_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/dtoSignal'
+  /api/v1/signal/get:
+    get:
+      tags:
+      - rest-signals-controller
+      operationId: get
+      parameters:
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoSignal'
+  /api/v1/leaderboard/byTimeFrame:
+    get:
+      tags:
+      - rest-leader-board-controller
+      operationId: getByTimeframe
+      parameters:
+      - name: tf
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/dtoLeaderBoardItem'
+  /api/v1/data/lists/simple/durations:
+    get:
+      tags:
+      - rest-static-data-controller
+      operationId: getSimpleDurations
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /api/v1/data/lists/securities:
+    get:
+      tags:
+      - rest-static-data-controller
+      operationId: getSecurities
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/dtoSimpleTicket'
+  /api/v1/data/lists/securities/get:
+    get:
+      tags:
+      - rest-static-data-controller
+      operationId: getSecuritieById
+      parameters:
+      - name: SECID
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/goTicket'
+  /api/v1/data/lists/durations:
+    get:
+      tags:
+      - rest-static-data-controller
+      operationId: getDurations
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goDuration'
+  /api/v1/conf/list:
+    get:
+      tags:
+      - rest-script-conf-controller
+      operationId: list
+      parameters:
+      - name: service
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/goScriptConfig'
+  /api/v1/conf/get:
+    get:
+      tags:
+      - rest-script-conf-controller
+      operationId: get_2
+      parameters:
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/goScriptConfig'
+  /api/v1/:
+    get:
+      tags:
+      - rest-main-controller
+      operationId: getTitle
+      responses:
+        "200":
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/dtoMessage'
+components:
+  schemas:
+    AbstractJsonSchemaPropertyObject:
+      type: object
+      properties:
+        title:
+          type: string
+        readOnly:
+          type: boolean
+    Item:
+      type: object
+      properties:
+        type:
+          type: string
+        properties:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/AbstractJsonSchemaPropertyObject'
+        requiredProperties:
+          type: array
+          items:
+            type: string
+    JsonSchema:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        properties:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/AbstractJsonSchemaPropertyObject'
+        requiredProperties:
+          type: array
+          items:
+            type: string
+        definitions:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/Item'
+        type:
+          type: string
+        $schema:
+          type: string
+    Links:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/Link'
+    RepresentationModelObject:
+      type: object
+      properties:
+        _links:
+          $ref: '#/components/schemas/Links'
+    EntityModelGoTicket:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        secid:
+          type: string
+        boardid:
+          type: string
+        shortname:
+          type: string
+        prevprice:
+          type: number
+          format: double
+        lotsize:
+          type: number
+          format: double
+        facevalue:
+          type: number
+          format: double
+        status:
+          type: string
+        boardname:
+          type: string
+        decimals:
+          type: number
+          format: double
+        secname:
+          type: string
+        remarks:
+          type: string
+        marketcode:
+          type: string
+        instrid:
+          type: string
+        sectorid:
+          type: string
+        minstep:
+          type: number
+          format: double
+        prevwaprice:
+          type: number
+          format: double
+        faceunit:
+          type: string
+        prevdate:
+          type: string
+        issuesize:
+          type: number
+          format: double
+        isin:
+          type: string
+        latname:
+          type: string
+        regnumber:
+          type: string
+        prevlegalcloseprice:
+          type: number
+          format: double
+        currencyid:
+          type: string
+        sectype:
+          type: string
+        listlevel:
+          type: number
+          format: double
+        settledate:
+          type: string
+        _links:
+          $ref: '#/components/schemas/Links'
+    PageMetadata:
+      type: object
+      properties:
+        size:
+          type: integer
+          format: int64
+        totalElements:
+          type: integer
+          format: int64
+        totalPages:
+          type: integer
+          format: int64
+        number:
+          type: integer
+          format: int64
+    PagedModelEntityModelGoTicket:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goTickets:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoTicket'
+        _links:
+          $ref: '#/components/schemas/Links'
+        page:
+          $ref: '#/components/schemas/PageMetadata'
+    goTicket:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        secid:
+          type: string
+        boardid:
+          type: string
+        shortname:
+          type: string
+        prevprice:
+          type: number
+          format: double
+        lotsize:
+          type: number
+          format: double
+        facevalue:
+          type: number
+          format: double
+        status:
+          type: string
+        boardname:
+          type: string
+        decimals:
+          type: number
+          format: double
+        secname:
+          type: string
+        remarks:
+          type: string
+        marketcode:
+          type: string
+        instrid:
+          type: string
+        sectorid:
+          type: string
+        minstep:
+          type: number
+          format: double
+        prevwaprice:
+          type: number
+          format: double
+        faceunit:
+          type: string
+        prevdate:
+          type: string
+        issuesize:
+          type: number
+          format: double
+        isin:
+          type: string
+        latname:
+          type: string
+        regnumber:
+          type: string
+        prevlegalcloseprice:
+          type: number
+          format: double
+        currencyid:
+          type: string
+        sectype:
+          type: string
+        listlevel:
+          type: number
+          format: double
+        settledate:
+          type: string
+    EntityModelGoDuration:
+      type: object
+      properties:
+        interval:
+          type: number
+          format: double
+        duration:
+          type: number
+          format: double
+        days:
+          type: number
+          format: double
+        title:
+          type: string
+        hint:
+          type: string
+        version:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        _links:
+          $ref: '#/components/schemas/Links'
+    PagedModelEntityModelGoDuration:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goDurations:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoDuration'
+        _links:
+          $ref: '#/components/schemas/Links'
+        page:
+          $ref: '#/components/schemas/PageMetadata'
+    goDuration:
+      type: object
+      properties:
+        interval:
+          type: number
+          format: double
+        duration:
+          type: number
+          format: double
+        days:
+          type: number
+          format: double
+        title:
+          type: string
+        hint:
+          type: string
+        version:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+    EntityModelGoLeaderBoardItem:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        ticker:
+          type: string
+        predict_price:
+          type: number
+          format: double
+        predict_profit:
+          type: number
+          format: double
+        timeframe:
+          type: string
+        create_date:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        dto:
+          $ref: '#/components/schemas/dtoLeaderBoardItem'
+        _links:
+          $ref: '#/components/schemas/Links'
+    PagedModelEntityModelGoLeaderBoardItem:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goLeaderBoardItems:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoLeaderBoardItem'
+        _links:
+          $ref: '#/components/schemas/Links'
+        page:
+          $ref: '#/components/schemas/PageMetadata'
+    dtoLeaderBoardItem:
+      type: object
+      properties:
+        ticker:
+          type: string
+        predict_price:
+          type: number
+          format: double
+        predict_profit:
+          type: number
+          format: double
+        timeframe:
+          type: string
+    CollectionModelEntityModelGoLeaderBoardItem:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goLeaderBoardItems:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoLeaderBoardItem'
+        _links:
+          $ref: '#/components/schemas/Links'
+    EntityModelGoSignal:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        taskId:
+          type: integer
+          format: int64
+        ticker:
+          type: string
+        ansamble_signal:
+          type: integer
+          format: int32
+        ansamble_signal_position:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        dto:
+          $ref: '#/components/schemas/dtoSignal'
+        _links:
+          $ref: '#/components/schemas/Links'
+    PagedModelEntityModelGoSignal:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goSignals:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoSignal'
+        _links:
+          $ref: '#/components/schemas/Links'
+        page:
+          $ref: '#/components/schemas/PageMetadata'
+    dtoSignal:
+      type: object
+      properties:
+        task_id:
+          type: integer
+          format: int64
+        ticker:
+          type: string
+        ansamble_signal:
+          type: integer
+          format: int32
+        ansamble_signal_position:
+          type: integer
+          format: int32
+    CollectionModelEntityModelGoSignal:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goSignals:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoSignal'
+        _links:
+          $ref: '#/components/schemas/Links'
+    EntityModelGoScriptConfig:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        service:
+          type: string
+        task_id:
+          type: integer
+          format: int64
+        scaler_path:
+          type: string
+        neural_path:
+          type: string
+        ticker:
+          type: string
+        timeframe:
+          type: string
+        start_date:
+          type: string
+        end_date:
+          type: string
+        count_points:
+          type: integer
+          format: int32
+        extr_bar_count:
+          type: integer
+          format: int32
+        max_unmark:
+          type: number
+          format: float
+        size_df:
+          type: integer
+          format: int32
+        count_days:
+          type: integer
+          format: int32
+        data_path:
+          type: string
+        new_model_flag:
+          type: boolean
+        learning_rate:
+          type: number
+          format: float
+        epochs:
+          type: integer
+          format: int32
+        steps_per_epoch:
+          type: integer
+          format: int32
+        validation_steps:
+          type: integer
+          format: int32
+        respos_url:
+          type: string
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        _links:
+          $ref: '#/components/schemas/Links'
+    PagedModelEntityModelGoScriptConfig:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goScriptConfigs:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        _links:
+          $ref: '#/components/schemas/Links'
+        page:
+          $ref: '#/components/schemas/PageMetadata'
+    goScriptConfig:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        service:
+          type: string
+        task_id:
+          type: integer
+          format: int64
+        scaler_path:
+          type: string
+        neural_path:
+          type: string
+        ticker:
+          type: string
+        timeframe:
+          type: string
+        start_date:
+          type: string
+        end_date:
+          type: string
+        count_points:
+          type: integer
+          format: int32
+        extr_bar_count:
+          type: integer
+          format: int32
+        max_unmark:
+          type: number
+          format: float
+        size_df:
+          type: integer
+          format: int32
+        count_days:
+          type: integer
+          format: int32
+        data_path:
+          type: string
+        new_model_flag:
+          type: boolean
+        learning_rate:
+          type: number
+          format: float
+        epochs:
+          type: integer
+          format: int32
+        steps_per_epoch:
+          type: integer
+          format: int32
+        validation_steps:
+          type: integer
+          format: int32
+        respos_url:
+          type: string
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+    CollectionModelEntityModelGoScriptConfig:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goScriptConfigs:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoScriptConfig'
+        _links:
+          $ref: '#/components/schemas/Links'
+    EntityModelGoUserAuthData:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        version:
+          type: integer
+          format: int32
+        username:
+          type: string
+        password:
+          type: string
+        displayableUsername:
+          type: string
+        enabled:
+          type: boolean
+        roles:
+          $ref: '#/components/schemas/goRole'
+        authorities:
+          type: array
+          items:
+            $ref: '#/components/schemas/GrantedAuthority'
+        accountNonExpired:
+          type: boolean
+        accountNonLocked:
+          type: boolean
+        credentialsNonExpired:
+          type: boolean
+        guid:
+          type: string
+        _links:
+          $ref: '#/components/schemas/Links'
+    GrantedAuthority:
+      type: object
+      properties:
+        authority:
+          type: string
+    PagedModelEntityModelGoUserAuthData:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goUserAuthDatas:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoUserAuthData'
+        _links:
+          $ref: '#/components/schemas/Links'
+        page:
+          $ref: '#/components/schemas/PageMetadata'
+    goRole:
+      type: object
+      properties:
+        title:
+          type: string
+        version:
+          type: integer
+          format: int32
+        authority:
+          type: string
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+    EntityModelGoTask:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        processID:
+          type: string
+        status:
+          type: integer
+          format: int32
+        config:
+          $ref: '#/components/schemas/goScriptConfig'
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        _links:
+          $ref: '#/components/schemas/Links'
+    PagedModelEntityModelGoTask:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goTasks:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoTask'
+        _links:
+          $ref: '#/components/schemas/Links'
+        page:
+          $ref: '#/components/schemas/PageMetadata'
+    goTask:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        processID:
+          type: string
+        status:
+          type: integer
+          format: int32
+        config:
+          $ref: '#/components/schemas/goScriptConfig'
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+    CollectionModelObject:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            objects:
+              type: array
+              items:
+                type: object
+        _links:
+          $ref: '#/components/schemas/Links'
+    CollectionModelEntityModelGoTask:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            goTasks:
+              type: array
+              items:
+                $ref: '#/components/schemas/EntityModelGoTask'
+        _links:
+          $ref: '#/components/schemas/Links'
+    goDurationRequestBody:
+      type: object
+      properties:
+        interval:
+          type: number
+          format: double
+        duration:
+          type: number
+          format: double
+        days:
+          type: number
+          format: double
+        title:
+          type: string
+        hint:
+          type: string
+        version:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+    goLeaderBoardItemRequestBody:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        ticker:
+          type: string
+        predict_price:
+          type: number
+          format: double
+        predict_profit:
+          type: number
+          format: double
+        timeframe:
+          type: string
+        create_date:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        dto:
+          $ref: '#/components/schemas/dtoLeaderBoardItem'
+    goScriptConfigRequestBody:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        service:
+          type: string
+        task_id:
+          type: integer
+          format: int64
+        scaler_path:
+          type: string
+        neural_path:
+          type: string
+        ticker:
+          type: string
+        timeframe:
+          type: string
+        start_date:
+          type: string
+        end_date:
+          type: string
+        count_points:
+          type: integer
+          format: int32
+        extr_bar_count:
+          type: integer
+          format: int32
+        max_unmark:
+          type: number
+          format: float
+        size_df:
+          type: integer
+          format: int32
+        count_days:
+          type: integer
+          format: int32
+        data_path:
+          type: string
+        new_model_flag:
+          type: boolean
+        learning_rate:
+          type: number
+          format: float
+        epochs:
+          type: integer
+          format: int32
+        steps_per_epoch:
+          type: integer
+          format: int32
+        validation_steps:
+          type: integer
+          format: int32
+        respos_url:
+          type: string
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+    goSignalRequestBody:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        taskId:
+          type: integer
+          format: int64
+        ticker:
+          type: string
+        ansamble_signal:
+          type: integer
+          format: int32
+        ansamble_signal_position:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        dto:
+          $ref: '#/components/schemas/dtoSignal'
+    goTaskRequestBody:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        processID:
+          type: string
+        status:
+          type: integer
+          format: int32
+        config:
+          type: string
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+    goTicketRequestBody:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+        id:
+          type: integer
+          format: int64
+        guid:
+          type: string
+        secid:
+          type: string
+        boardid:
+          type: string
+        shortname:
+          type: string
+        prevprice:
+          type: number
+          format: double
+        lotsize:
+          type: number
+          format: double
+        facevalue:
+          type: number
+          format: double
+        status:
+          type: string
+        boardname:
+          type: string
+        decimals:
+          type: number
+          format: double
+        secname:
+          type: string
+        remarks:
+          type: string
+        marketcode:
+          type: string
+        instrid:
+          type: string
+        sectorid:
+          type: string
+        minstep:
+          type: number
+          format: double
+        prevwaprice:
+          type: number
+          format: double
+        faceunit:
+          type: string
+        prevdate:
+          type: string
+        issuesize:
+          type: number
+          format: double
+        isin:
+          type: string
+        latname:
+          type: string
+        regnumber:
+          type: string
+        prevlegalcloseprice:
+          type: number
+          format: double
+        currencyid:
+          type: string
+        sectype:
+          type: string
+        listlevel:
+          type: number
+          format: double
+        settledate:
+          type: string
+    goUserAuthDataRequestBody:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        version:
+          type: integer
+          format: int32
+        username:
+          type: string
+        password:
+          type: string
+        displayableUsername:
+          type: string
+        enabled:
+          type: boolean
+        roles:
+          $ref: '#/components/schemas/goRole'
+        authorities:
+          type: array
+          items:
+            $ref: '#/components/schemas/GrantedAuthority'
+        accountNonExpired:
+          type: boolean
+        accountNonLocked:
+          type: boolean
+        credentialsNonExpired:
+          type: boolean
+        guid:
+          type: string
+    dtoMessage:
+      type: object
+      properties:
+        serverDateTime:
+          type: string
+          format: date-time
+        message:
+          type: string
+        type:
+          type: string
+    dtoUserAuth:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+    dtoSimpleTicket:
+      type: object
+      properties:
+        secid:
+          type: string
+        shortname:
+          type: string
+        secname:
+          type: string
+    Link:
+      type: object
+      properties:
+        href:
+          type: string
+        hreflang:
+          type: string
+        title:
+          type: string
+        type:
+          type: string
+        deprecation:
+          type: string
+        profile:
+          type: string
+        name:
+          type: string
+        templated:
+          type: boolean
