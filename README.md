@@ -68,5 +68,5 @@
 </p>
 <p align="center">
 <a href="https://github.com/kharisovilyas"><img src="https://api.daily.dev/devcards/0920b2e42cb74173859effe43bdeaba7.png?r=mea" width="170" alt="Ilias Kharisov's Dev Card"/></a>
-<a href="https://app.daily.dev/innosan"><img src="https://api.daily.dev/devcards/7de3b304f01346c9ad40684a1ab1cf78.png?r=6kx" width="170" alt="Mikhail Fomin's Dev Card"/></a>
+<a href="https://github.com/innosan"><img src="https://api.daily.dev/devcards/7de3b304f01346c9ad40684a1ab1cf78.png?r=6kx" width="170" alt="Mikhail Fomin's Dev Card"/></a>
 </p>
