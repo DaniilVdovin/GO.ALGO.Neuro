@@ -40,7 +40,7 @@
 
 📘 [Гайдбук (HOW-TO-GUIDE)](https://github.com/powerlife000/moex_hackaton/blob/main/how-to-guide.pdf)
 
-📺 [Презентация (PROMO)](https://github.com/DaniilVdovin/GO.ALGO.Neuro/blob/b954a6bcec4198a7872c8a7a34f6d306008427ff/NullPointerExeption%20v1.pdf)
+📺 [Презентация (PROMO)](https://github.com/DaniilVdovin/GO.ALGO.Neuro/blob/main/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5.pptx.pdf)
 
 🖇️ [Документация к API (OpenAPI .yaml)](https://github.com/DaniilVdovin/GO.ALGO.Neuro/blob/main/api-docs.yaml)
 
