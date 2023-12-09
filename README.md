@@ -23,6 +23,8 @@
 
 🕸️ [Наше Web-приложение (Пользовательский интерфейс)](https://github.com/Innosan/go_algo_web)
 
+📹 [Промо ролик (YouTube)](https://www.youtube.com/watch?v=X952ia86A90)
+
 🎨 [Дизайн платформы (Figma)](https://www.figma.com/file/5EyUOzpstPbvbuEsBEyCsR/GO.ALGO.Neuro)
 
 🧠 [Исходные коды микросервисов пайплайна  (Микро сервисы)](https://github.com/powerlife000/moex_hackaton/)
